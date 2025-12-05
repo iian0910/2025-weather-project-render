@@ -12,8 +12,9 @@ services:
   # -----------------------------
   # Frontend (Vite)
   # -----------------------------
-  - type: static
+  - type: web
     name: vue-frontend
     rootDir: frontend
+    env: static
     buildCommand: "npm install && npm run build"
     staticPublishPath: "dist"
