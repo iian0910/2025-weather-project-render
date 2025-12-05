@@ -1,0 +1,19 @@
+services:
+  # -----------------------------
+  # Backend (Node.js)
+  # -----------------------------
+  - type: web
+    name: node-backend
+    rootDir: backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+
+  # -----------------------------
+  # Frontend (Vite)
+  # -----------------------------
+  - type: static
+    name: vue-frontend
+    rootDir: frontend
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "dist"
